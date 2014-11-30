@@ -1,0 +1,1248 @@
+/*
+  * What follows is the result of much research on cross-browser styling.
+  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+  * Kroc Camen, and the H5BP dev community and team.
+  *Author:    wedevs
+  *Author URI: http://www.wedevs.com
+  */
+/* ==========================================================================
+  Base styles: opinionated defaults
+  ========================================================================== */
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+html {
+  font-size: 1em;
+  line-height: 1.4;
+}
+/*
+  * Remove text-shadow in selection highlight: h5bp.com/i
+  * These selection rule sets have to be separate.
+  * Customize the background color to match your design.
+  */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+/*
+  * A better looking default horizontal rule
+  */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+/*
+  * Remove the gap between images, videos, audio and canvas and the bottom of
+  * their containers: h5bp.com/i/440
+  */
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle;
+}
+/*
+  * Remove default fieldset styles.
+  */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+/*
+  * Allow only vertical resizing of textareas.
+  */
+textarea {
+  resize: vertical;
+}
+/* ==========================================================================
+  Browse Happy prompt
+  ========================================================================== */
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+/* ==========================================================================
+  Author's custom styles
+  ========================================================================== */
+/*
+  * Image replacement
+  */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+/*
+  * Hide from both screenreaders and browsers: h5bp.com/u
+  */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+/*
+  * Hide only visually, but have it available for screenreaders: h5bp.com/v
+  */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/*
+  * Extends the .visuallyhidden class to allow the element to be focusable
+  * when navigated to via the keyboard: h5bp.com/p
+  */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+/*
+  * Hide visually and from screenreaders, but maintain layout
+  */
+.invisible {
+  visibility: hidden;
+}
+/*
+  * Clearfix: contain floats
+  *
+  * For modern browsers
+  * 1. The space content is one way to avoid an Opera bug when the
+  *    `contenteditable` attribute is included anywhere else in the document.
+  *    Otherwise it causes space to appear at the top and bottom of elements
+  *    that receive the `clearfix` class.
+  * 2. The use of `table` rather than `block` is only necessary if using
+  *    `:before` to contain the top-margins of child elements.
+  */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.clearfix:after {
+  clear: both;
+}
+/*
+  * For IE 6/7 only
+  * Include this rule to trigger hasLayout and contain floats.
+  */
+.clearfix {
+  *zoom: 1;
+}
+/* ==========================================================================
+  EXAMPLE Media Queries for Responsive Design.
+  These examples override the primary ('mobile first') styles.
+  Modify as content requires.
+  ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+@media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+/* ==========================================================================
+  Print styles.
+  Inlined to avoid required HTTP connection: h5bp.com/r
+  ========================================================================== */
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+  * Don't show links for images, or javascript/internal links
+  */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  @page {
+    margin: 0.5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+/* ==========================================================================
+  custom styles
+  ========================================================================== */
+body {
+  font-family: Arial;
+  font-size: 14px;
+  line-height: 18px;
+}
+a:hover,
+a:focus {
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.hidden {
+  overflow: hidden;
+}
+.slicknav_menu {
+  display: none;
+}
+/* ==========================================================================
+  SOCIAL SECTION
+  ========================================================================== */
+.social-area {
+  background: #252525;
+  min-height: 45px;
+  color: #FFFFFF;
+}
+.social-area .fa {
+  color: #ffffff;
+  padding-top: 20px;
+}
+.language .lang-list {
+  padding-top: 10px;
+}
+.language select {
+  background: #252525;
+  width: 80px;
+  color: #FFFFFF;
+  border: none;
+}
+.language .lang-list:before {
+  background: none repeat scroll 0 0 #252525;
+  color: #ffffff;
+  content: "";
+  font-family: FontAwesome;
+  height: 24px;
+  left: 109px;
+  padding: 5px 0 0;
+  pointer-events: none;
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  width: 20px;
+  font-size: 9px;
+}
+/* ==========================================================================
+  HEADER SECTION
+  ========================================================================== */
+.site-header {
+  background: #03AEDD;
+  color: #FFFFFF;
+  position: relative;
+  text-align: center;
+}
+.site-header .main-menu .menu-list {
+  margin: 0;
+  padding: 0;
+}
+.site-header .main-menu .menu-list li {
+  display: inline-block;
+  margin: 0 -2px;
+  padding: 0;
+  z-index: 999;
+  list-style: none;
+  position: relative;
+}
+.site-header .main-menu .menu-list li:nth-child(4) {
+  padding-right: 80px;
+}
+.site-header .main-menu .menu-list li:nth-child(5) {
+  padding-left: 80px;
+}
+.site-header .main-menu .menu-list li a {
+  color: #ffffff;
+  display: inline-block;
+  font-family: "Roboto Slab", serif;
+  font-size: 17px;
+  font-weight: 300;
+  padding: 26px 15px;
+  transition: all 0.9s ease 0s;
+  -moz-transition: all 0.9s ease 0s;
+  -webkit-transition: all 0.9s ease 0s;
+  margin: 0;
+}
+.site-header .main-menu .menu-list li a:hover {
+  background: #FFFFFF;
+  color: #03AEDD;
+}
+.site-header .main-menu .logo {
+  background: url("assets/images/logo.png") no-repeat scroll center center / cover rgba(0, 0, 0, 0);
+  height: 113px;
+  left: 504px;
+  position: absolute;
+  top: 8px;
+  width: 150px;
+  z-index: 99;
+}
+/* ==========================================================================
+  SLIDER SECTION
+  ========================================================================== */
+.slider-area {
+  background: url("assets/images/slider.jpg") no-repeat scroll center center / cover rgba(0, 0, 0, 0);
+  min-height: 480px;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.slide {
+  background: none repeat scroll 0 0 #000;
+  color: #ffffff;
+  left: 0;
+  height: 480px;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  width: 70%;
+}
+.slide-content {
+  color: #ffffff;
+  margin-right: 33px;
+  margin-top: 93px;
+  padding-right: 11px;
+  text-align: right;
+  position: absolute;
+  height: 358px;
+  overflow: hidden;
+  width: 65%;
+}
+.slide-content h2 {
+  font-family: roboto slab;
+  font-size: 35px;
+  font-weight: 300;
+  line-height: 45px;
+  margin-bottom: 28px;
+}
+.slide-content p {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  line-height: 27px;
+}
+.slide-content .slider-btn {
+  background: none repeat scroll 0 0 #03aedd;
+  border-radius: 0;
+  color: #ffffff;
+  font-family: roboto slab;
+  font-size: 17px;
+  font-weight: 300;
+  margin: 0;
+  padding: 0 15px;
+  text-transform: uppercase;
+}
+.slide-content .slider-btn a {
+  color: #FFFFFF;
+  margin-top: 1px;
+}
+.slide-content .slider-btn .fa {
+  background: none repeat scroll 0 0 #04c9ff;
+  font-size: 11px;
+  margin-left: 20px;
+  margin-right: -15px;
+  padding: 15px;
+}
+/* ==========================================================================
+  ACTION SECTION
+  ========================================================================== */
+.action-area {
+  background: none repeat scroll 0 0 #fef797;
+  color: #434343;
+  font-family: roboto slab;
+  padding: 15px 0;
+}
+.action-area h2 {
+  font-family: roboto slab;
+  font-size: 22px;
+  font-weight: 300;
+}
+.action-area p {
+  font-family: lato;
+  font-size: 15px;
+  font-weight: 300;
+}
+.action-area .action-btn {
+  background: none repeat scroll 0 0 #f26c4f;
+  border-radius: 0;
+  color: #ffffff;
+  font-family: roboto slab;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 0 20px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 44px;
+}
+.action-area .action-btn .fa {
+  background: none repeat scroll 0 0 #fe866c;
+  font-size: 13px;
+  margin-left: 11px;
+  margin-right: -21px;
+  padding: 15px;
+}
+.action-area .action {
+  padding-bottom: 29px;
+  padding-top: 11px;
+  width: 90%;
+}
+/* ==========================================================================
+  FEATURED AREA  SECTION
+  ========================================================================== */
+.featured-area .single-featured {
+  border: 1px solid #03aedd;
+  color: #ffffff;
+  margin-bottom: 30px;
+  min-height: 312px;
+  text-align: center;
+}
+.featured-area .single-featured p {
+  color: #4e4e4e;
+  padding: 27px;
+  text-align: left;
+}
+.featured-area .single-featured .feature-title {
+  background: none repeat scroll 0 0 #03aedd;
+  border: medium none;
+  border-radius: 0;
+  bottom: 0;
+  color: #ffffff;
+  font-family: roboto slab;
+  font-size: 15px;
+  font-weight: 100;
+  height: 40px;
+  left: 0;
+  margin-bottom: 0;
+  padding: 10px 0;
+  position: absolute;
+  right: 0;
+  text-transform: uppercase;
+}
+.featured-area .single-featured .feature-title a {
+  color: #FFFFFF;
+}
+.featured-area .single-featured .feature-title a .fa {
+  background: none repeat scroll 0 0 #04c9ff;
+  border: 0 none;
+  font-size: 15px;
+  margin: -10px -6px 0 1px;
+  padding: 13px;
+}
+.featured-area header {
+  color: #222222;
+  font-family: roboto slab;
+  font-size: 35px;
+  font-weight: 300;
+  margin-bottom: 30px;
+  margin-left: 16px;
+  margin-top: 80px;
+  text-transform: uppercase;
+  line-height: 44px;
+}
+.featured-area .featured-list {
+  background: none repeat scroll 0 0 #03aedd;
+  text-align: center;
+}
+.featured-area .featured-list li i.fa {
+  border: 1px solid #ffffff;
+  border-radius: 29px;
+  font-size: 20px;
+  margin-top: 10px;
+  padding: 14px 15px;
+  text-align: center;
+  width: 50px;
+}
+.featured-area .featured-list li img {
+  margin-top: 12px;
+  margin-bottom: 0px;
+}
+.featured-area .featured-list li h2 {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 9px;
+  padding-bottom: 21px;
+}
+.featured-area .featured-btn {
+  background: none repeat scroll 0 0 #03aedd;
+  border: medium none;
+  border-radius: 0;
+  color: #ffffff;
+  font-family: roboto slab;
+  font-size: 15px;
+  font-weight: 100;
+  height: 38px;
+  padding: 6px 0 0;
+  text-transform: uppercase;
+  width: 100%;
+}
+.featured-area .featured-btn .fa {
+  background: none repeat scroll 0 0 #04c9ff;
+  border: 0 none;
+  float: right;
+  font-size: 10px;
+  font-weight: 100;
+  margin-bottom: -3px;
+  margin-top: -30px;
+  padding: 14px;
+  text-align: right;
+}
+.featured-area .allcourse-button {
+  text-align: center;
+}
+.featured-area .allcourse-button .course-btn {
+  background: none repeat scroll 0 0 #03aedd;
+  border: 0 none;
+  border-radius: 0;
+  color: #ffffff;
+  font-family: roboto slab;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 60px;
+  margin-top: 60px;
+  padding: 0 20px;
+  text-transform: uppercase;
+}
+.featured-area .allcourse-button .course-btn .fa {
+  background: none repeat scroll 0 0 #04c9ff;
+  margin-left: 24px;
+  margin-right: -20px;
+  padding: 20px;
+}
+/* ==========================================================================
+  TEACHER AREA  SECTION
+  ========================================================================== */
+.teacher-area header {
+  color: #222222;
+  font-family: roboto slab;
+  font-size: 35px;
+  font-weight: 300;
+  line-height: 50px;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+}
+.teacher-area .single-list li {
+  margin-right: 0;
+}
+.teacher-area .single-teacher {
+  margin-right: 0;
+  width: 215px;
+  margin-bottom: 30px;
+}
+.teacher-area .single-teacher h2 {
+  color: #434343;
+  font-family: roboto slab;
+  font-size: 18px;
+  margin: 5px auto;
+  padding-top: 18px;
+  text-transform: uppercase;
+}
+.teacher-area .single-teacher img {
+  width: 100%;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+.teacher-area .single-teacher img:hover {
+  -webkit-transform: rotateY(180deg);
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.teacher-area .single-teacher p {
+  color: #656565;
+  font-family: roboto slab;
+  font-size: 14px;
+  font-weight: 300;
+  margin: 8px auto;
+}
+/* ==========================================================================
+  CAMPUS AREA  SECTION
+  ========================================================================== */
+.campus-area {
+  background: none repeat scroll 0 0 #edeff3;
+  margin-top: 15px;
+  padding: 57px 0 45px 0;
+  position: relative;
+  width: 100%;
+}
+.campus-area .campus {
+  height: 189px;
+  background: #03AEDD;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+}
+.campus-area .campus .fa {
+  font-size: 50px;
+  margin-top: 20px;
+  padding: 18px 10px;
+}
+.campus-area .campus:before {
+  border-color: #03aedd #edeff3;
+  border-style: solid;
+  border-width: 0 38px 37px 0;
+  -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3), -1px 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3), -1px 1px 1px rgba(0, 0, 0, 0.2);
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 0;
+}
+.campus-area .campus:after {
+  color: #ffffff;
+  content: "+";
+  font-size: 20px;
+  position: absolute;
+  right: 35px;
+  top: 15px;
+}
+.campus-area .campus img {
+  margin-bottom: 16px;
+  margin-top: 33px;
+}
+.campus-area .campus h2 {
+  font-family: roboto slab;
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+/* ==========================================================================
+  TESTIMONIAL AREA  SECTION
+  ========================================================================== */
+#testimonials {
+  overflow: hidden;
+}
+.testimonial-area {
+  background: url(assets/images/testimonial-bg.jpg) fixed 0 0 no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  color: #FFFFFF;
+}
+.testimonial-area .testiomonial {
+  background: url("assets/images/testi-content.png") no-repeat scroll 170px 0 rgba(0, 0, 0, 0);
+  left: 162px;
+  margin-top: 190px;
+  min-height: 690px;
+  padding-top: 146px;
+  top: 0;
+}
+.testimonial-area .testiomonial img {
+  float: right;
+  margin-left: 12px;
+  padding: 1px;
+}
+.testimonial-area .testiomonial p {
+  font-family: lato;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 300;
+  text-align: right;
+}
+.testimonial-area .testiomonial h2 {
+  font-family: lato;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 5px 0;
+  text-align: right;
+}
+.testimonial-area .testiomonial span {
+  float: right;
+  font-family: lato;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 400;
+}
+.testimonial-area .video-area {
+  background: none repeat scroll 0 0 #15222e;
+  margin: 180px 0 0;
+}
+.testimonial-area .video-area img {
+  width: 100%;
+}
+.testimonial-area .video-area .video-title h2 {
+  font-family: roboto slab;
+  font-size: 24px;
+  line-height: 33px;
+  padding: 0 18px 30px 46px;
+  text-align: left;
+  width: 98%;
+}
+.testimonial-area .video-area .video-title .fa {
+  background: none repeat scroll 0 0 #4b657e;
+  float: right;
+  margin-top: -89px;
+  padding: 12px;
+}
+.course-title {
+  color: red;
+}
+/* ==========================================================================
+  BLOG AND EVENT AREA  SECTION
+  ========================================================================== */
+.blogand-eventarea {
+  background: #FFFFFF;
+  margin-top: 60px;
+}
+.blogand-eventarea .add img {
+  width: 100%;
+  margin: 0 auto;
+}
+.blogand-eventarea img {
+  float: left;
+  padding: 3px 16px 3px 0;
+}
+.blogand-eventarea header {
+  font-family: roboto slab;
+  font-size: 35px;
+  font-weight: 300;
+  line-height: 55px;
+  text-transform: uppercase;
+  margin-bottom: 45px;
+}
+.blogand-eventarea h2 {
+  font-family: roboto slab;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+.blogand-eventarea .single-blog {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.blogand-eventarea .single-blog .blog_img .sinlge-post {
+  margin-bottom: 34px;
+  width: 100%;
+}
+.blogand-eventarea .single-blog .blog_img .sinlge-post:hover {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -webkit-transition-timing-function: ease-out;
+  -webkit-transition-duration: 250ms;
+  -moz-transform: scale(1);
+  -moz-transition-timing-function: ease-out;
+  -moz-transition-duration: 250ms;
+}
+.blogand-eventarea .single-blog .blog_img img {
+  opacity: 1;
+  -webkit-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+}
+.blogand-eventarea .single-blog .blog_img img:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  opacity: .8;
+  z-index: 99;
+}
+.blogand-eventarea .single-blog .blog-content p {
+  font-family: roboto slab;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 21px;
+  padding: 6px 0 0;
+  text-align: justify;
+}
+.blogand-eventarea .single-blog .blog-content .blog-btn {
+  background: none repeat scroll 0 0 #03aedd;
+  border: 0 none;
+  border-radius: 0;
+  color: #ffffff;
+  font-family: roboto slab;
+  font-size: 10px;
+  font-weight: 300;
+  padding: 0 0 0 12px;
+  text-transform: uppercase;
+}
+.blogand-eventarea .single-blog .blog-content .blog-btn .fa {
+  background: none repeat scroll 0 0 #04c9ff;
+  margin-left: 9px;
+  padding: 6px;
+}
+.blogand-eventarea .single-blog .blog-content .social-list {
+  background: #03AEDD;
+}
+.blogand-eventarea .single-blog .blog-content .social-list li {
+  border-right: 1px solid #FFFFFF;
+  padding: 1px 3px;
+}
+.blogand-eventarea .single-blog .blog-content .social-list li a {
+  color: #FFFFFF;
+}
+.blogand-eventarea .single-blog .blog-content .social-list li a span {
+  background: none repeat scroll 0 0 #04c9ff;
+  font-family: roboto slab;
+  font-size: 13px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.blogand-eventarea .single-blog .blog-content .social-list li:last-child {
+  background: none repeat scroll 0 0 #04c9ff;
+  border-right: 0 none;
+  margin-left: -4px;
+  padding: 1px 8px;
+}
+.blogand-eventarea .single-blog .blog-content .social-list li .fa-facebook {
+  padding: 1px 3px;
+}
+/* ==========================================================================
+        EVENT AREA  
+       ========================================================================== */
+.event-area {
+  border: 9px solid #4c4d4f;
+  margin-bottom: 30px;
+}
+.event-area header {
+  background: none repeat scroll 0 0 #03aedd;
+  color: #ffffff;
+  font-family: roboto slab;
+  font-weight: 300;
+  padding: 17px 0;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.event-area h2 {
+  background: none repeat scroll 0 0 #03aedd;
+  color: #ffffff;
+  font-family: roboto slab;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 13px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+.event-area h2 a {
+  color: #FFFFFF;
+}
+.event-area .single-event {
+  margin-bottom: 20px;
+}
+.event-area .single-event .date-area {
+  background: none repeat scroll 0 0 #03aedd;
+  color: #ffffff;
+  float: left;
+  font-family: roboto slab;
+  font-size: 14px;
+  font-weight: 100;
+  margin-left: 15px;
+  margin-right: 26px;
+  padding: 3px 19px;
+  text-align: center;
+}
+.event-area .single-event .date-area span {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.event-area .single-event .date-area h2 {
+  font-family: roboto slab;
+  font-size: 45px;
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
+}
+.event-area .single-event .event-content {
+  font-family: lato;
+  font-size: 14px;
+  font-weight: 400;
+  padding-right: 54px;
+}
+.event-area .single-event .event-content p {
+  margin-left: 15px;
+}
+/* ==========================================================================
+      PARTNER AREA  SECTION
+     ========================================================================== */
+.partner-area {
+  text-align: center;
+  margin: 30px auto;
+}
+.partner-area header {
+  color: #222222;
+  font-family: roboto slab;
+  font-size: 35px;
+  font-weight: 300;
+  line-height: 55px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.partner-area .partner-list > li {
+  margin-bottom: 20px;
+}
+/* ==========================================================================
+      PROTFOLIO AREA  SECTION
+     ========================================================================== */
+.protfolio-area {
+  background: url(assets/images/protfolio-bg.jpg) fixed no-repeat 0 0;
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: relative;
+}
+.protfolio-area header {
+  margin-bottom: 14px;
+  margin-top: 30px;
+  padding: 12px 0;
+}
+.protfolio-area header .radio-title li span {
+  color: #ffffff;
+  font-family: lato;
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.protfolio-area header .radio-title li span .fa {
+  font-size: 18px;
+  position: relative  ;
+}
+.protfolio-area .protfolio-hove {
+  background: url("assets/images/protfolio-hove.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.protfolio-area .protfolio-list li {
+  float: left;
+}
+.protfolio-area .protfolio-list li .single-item {
+  background: none repeat scroll 0 0 #ffffff;
+  margin-bottom: 15px;
+  width: 261px;
+  height: auto;
+  margin-right: 8px;
+  position: relative;
+}
+.protfolio-area .protfolio-list li .single-item img {
+  width: 100%;
+}
+.protfolio-area .protfolio-list li .single-item h2 {
+  font-family: lato;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
+  padding: 15px 0;
+  text-align: center;
+}
+.protfolio-area .protfolio-list li .single-item .icon .fa {
+  color: #ffffff;
+  font-size: 0px;
+  bottom: 0;
+  text-align: center;
+  position: absolute;
+  display: none;
+  left: 0;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  display: block;
+}
+.protfolio-area .protfolio-list li .single-item .single-hover {
+  background: none repeat scroll 0 0 red;
+  bottom: 0px;
+  height: 0%;
+  left: 0;
+  opacity: 0.3;
+  position: absolute;
+  width: 100%;
+  display: block;
+  transition: all 0.2s ease 0s;
+  -moz-transition: all 0.2s ease 0s;
+  -webkit-transition: all 0.2s ease 0s;
+}
+.protfolio-area .protfolio-list li .single-item:hover .single-hover {
+  display: block;
+  height: 100%;
+}
+.protfolio-area .protfolio-list li .single-item:hover .fa {
+  display: block;
+  bottom: 40%;
+  left: 40%;
+  font-size: 54px;
+}
+/* ==========================================================================
+      CONTACT AREA  SECTION
+     ========================================================================== */
+.contact-area {
+  background: none repeat scroll 0 0 #00bff3;
+  padding: 22px 0;
+}
+.contact-area .hotline {
+  margin-top: 47px;
+}
+.contact-area .hotline h2 {
+  color: #ffffff;
+  font-family: roboto slab;
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.contact-area .hotline .hotline-list > li {
+  color: #ffffff;
+  font-family: lato;
+  font-weight: 300;
+  line-height: 23px;
+}
+.contact-area .download-area {
+  border: 2px solid #ffffff;
+  margin: 27px 0;
+  min-height: 127px;
+}
+.contact-area .download-area h2 {
+  color: #ffffff;
+  font-family: lato;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  margin-top: 34px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.contact-area .download-area h3 {
+  color: #ffffff;
+  font-family: lato;
+  font-size: 35px;
+  font-weight: 300;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+.contact-area .download-area .download-list {
+  text-align: center;
+}
+.contact-area .download-area .download-list li a > .fa {
+  color: #ffffff;
+  font-size: 31px;
+  margin-top: 40px;
+  text-align: center;
+}
+.contact-area .signup-area {
+  margin-top: 47px;
+}
+.contact-area .signup-area h2 {
+  color: #ffffff;
+  font-family: roboto slab;
+  font-size: 20px;
+  font-weight: 300;
+}
+.contact-area .signup-area input[type="text"] {
+  border: 0 none;
+  float: left;
+  margin: 0;
+  padding: 11px;
+  width: 74%;
+}
+.contact-area .signup-area input[type="submit"] {
+  background: none repeat scroll 0 0 #4c4f50;
+  border: 0 none;
+  color: #ffffff;
+  float: left;
+  padding: 11px 8px;
+  margin: 0;
+}
+/* ==========================================================================
+  FOOTER AREA  SECTION
+  ========================================================================== */
+.footer-area {
+  background: none repeat scroll 0 0 #1e1e1e;
+  color: #ffffff;
+  padding: 115px 0 73px 0;
+}
+.footer-area .more-tweet {
+  text-align: center;
+}
+.footer-area .more-tweet h2 {
+  background: none repeat scroll 0 0 #242424;
+  font-family: roboto slab;
+  font-size: 15px;
+  font-weight: 300;
+  margin: 4px 0;
+  padding: 7px 0;
+}
+.footer-area .tweet-area .tweet-header {
+  font-family: roboto slab;
+  font-size: 25px;
+  font-weight: 300;
+  margin-bottom: 21px;
+}
+.footer-area .tweet-area .tweet-header .slogan {
+  margin-bottom: 27px;
+}
+.footer-area .tweet-area .tweet-header .slogan li {
+  font-family: roboto slab;
+  font-size: 25px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.footer-area .tweet-area .tweet-header .slogan-twitter {
+  margin-bottom: 27px;
+}
+.footer-area .tweet-area .tweet-header .slogan-twitter li > .fa {
+  font-size: 25px;
+  color: #00BFF3;
+}
+.footer-area .tweet-area .tweet-content .tweet-name {
+  margin-bottom: 2px;
+}
+.footer-area .tweet-area .tweet-content .tweet-name li {
+  font-family: lato;
+  font-size: 11px;
+  font-weight: 300;
+}
+.footer-area .tweet-area .tweet-content .tweet-name li span {
+  font-family: lato;
+  font-size: 13px;
+  font-weight: 400;
+}
+.footer-area .tweet-area .tweet-content .tweet-expend li {
+  font-family: lato;
+  font-size: 11px;
+  font-weight: 400;
+}
+.footer-area .tweet-area .tweet-content .re-tweet li {
+  font-size: 10px;
+}
+.footer-area .tweet-area .tweet-content p {
+  font-family: lato;
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 14px;
+  margin-bottom: 1px;
+}
+.footer-area a {
+  color: #FFFFFF;
+}
+.footer-area .link-area h2 {
+  font-family: roboto slab;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+}
+.footer-area .link-area .link-list ul > li {
+  font-family: lato;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 20px;
+  list-style: none;
+  margin-left: -29px;
+}
+.footer-area .addmition-area h2 {
+  font-family: roboto slab;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+}
+.footer-area .addmition-area .admition-list ul > li {
+  font-family: lato;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 20px;
+  list-style: none;
+  margin-left: -29px;
+}
+.footer-bottom {
+  background: #252525;
+}
+.footer-bottom p {
+  color: #ffffff;
+  font-family: lato;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 13px 0;
+  margin: 0;
+}
+.container .mix {
+  text-align: left;
+  background: #03899c;
+  margin-bottom: 2%;
+  display: none;
+}
+.edu-mix {
+  min-height: 300px;
+  overflow: hidden;
+}
+.mix {
+  height: 121px;
+  background: red;
+  width: 300px;
+  overflow: hidden;
+}

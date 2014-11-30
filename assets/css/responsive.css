@@ -1,0 +1,60 @@
+/********* MOBILE LAYOUT ************/
+@media (max-width: 767px){
+    .slicknav_menu{display: block;}
+    .main-menu{display: none;}
+    .slide-content{overflow: scroll;}
+    .teacher-area .single-list li {
+  float: none;
+  margin-right: 0;
+  text-align: center;
+  width: 100%;
+}
+    .teacher-area .single-teacher {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.protfolio-area .protfolio-list li {
+  float: none;
+  text-align: center;
+  width: 100%;
+}
+
+.protfolio-area .protfolio-list li .single-item {
+  background: none repeat scroll 0 0 #ffffff;
+  height: auto;
+  margin: 0 auto 30px;
+  position: relative;
+  width: 100%;
+}
+
+
+}
+/********** TABLET LAYOUT ************/
+@media (min-width: 768px) {
+    .main-menu{display: none;}
+    .slicknav_menu{display: block;}
+     .slide-content{overflow: scroll;}
+
+
+
+}
+/********** MEDIA LAYOUT **************/
+@media (min-width: 992px) {
+     .slicknav_menu{display: none;} 
+      .main-menu{display: inline-block;}
+       .slide-content{overflow: hidden;}
+
+
+
+}
+/********* LARGE LAYOUT **************/
+@media (min-width: 1200px) {
+ .slicknav_menu{display: none;} 
+  .main-menu{display: inline-block;}
+         .slide-content{overflow: hidden;}
+
+
+
+
+}
